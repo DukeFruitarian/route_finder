@@ -1,0 +1,35 @@
+<%= content_tag("div", :id => "route#{indx}", :style => "width: 45%; float: #{indx == 0 ? 'left' : 'right'}") do%>  
+  <h1>Перелёты (из <%=route.departure%> в <%=route.arrival%>):</h1>
+  <% unless route.flys.count == 0 %>
+    <% route.flys.each_with_index do |full_fly, ff_idx|%>
+      <%= content_tag("div" ,:class => "full_fly") do%>
+        <span id="track_count" style="display: none"><%= full_fly.tracks.count-1 %></span>
+        <% full_fly.tracks.each do |track| %>
+          <%= content_tag("div" ,:style => "display:none", :class => "track_#{indx}_#{ff_idx}",:onclick =>"$('.track_#{indx}_#{ff_idx}').slideUp('fast');") do%>  
+            <% unless track.pending_time == 0%>
+              Время ожидания: <%= seconds_to_time(track.pending_time)%><br />
+            <% end %>
+            Из: <%= track.dep_place%><br />
+            В   <%= Time.at(track.dep_time).strftime("%y.%m.%d %H:%M")%><br />
+            В:  <%= track.arr_place%><br /> 
+            К   <%= Time.at(track.arr_time).strftime("%y.%m.%d %H:%M")%><br />
+            Стоимость: <%= track.cost.to_i%><br />
+            Авиакомпания: <%= track.company%><br /><br />
+          <% end%>
+        <% end %>
+        <%= content_tag("div", :id => "summary_#{indx}_#{ff_idx}",:onclick =>"$('.track_#{indx}_#{ff_idx}').slideDown('slow');") do%>
+          Общая стоимость: <span id="price"><%= full_fly.total_cost%></span><br />
+          <% unless full_fly.total_pending_time == 0%>
+            Общее время ожидания: <%= seconds_to_time(full_fly.total_pending_time)%><br />
+            <span id="total_pending_time" style="display: none"><%= full_fly.total_pending_time %></span>
+          <% end %>
+          Общее время в пути: <%= seconds_to_time(full_fly.total_time)%>
+          <span id="total_time" style="display: none"><%= full_fly.total_time %></span>
+          <hr /><br /><br />
+        <% end %>
+      <% end %>
+    <% end %>
+  <% else %>
+    Извините, по Вашему запросу ничего не найдено. Попробуйте изменить параметры поиска
+  <% end %>
+<% end %>

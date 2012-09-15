@@ -1,0 +1,9 @@
+<%= render(:partial => "find_form")%>
+
+
+<% if @member && (@member.results.each{}.count != 0) %>
+  <h1>Ваши недавние поиски:</h1>
+  <% @member.results.each do |result|%>
+    <%= render(:partial => "recent_search", :object => result) %>
+  <% end %>
+<% end %>

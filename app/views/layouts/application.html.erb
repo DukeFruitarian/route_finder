@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Depot</title>
+  	<%= stylesheet_link_tag    "finder", :media => "all" %>
+  	<%= stylesheet_link_tag    "scaffolds" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= javascript_include_tag "modal" %>
+  	<%= csrf_meta_tags %>
+	</head>
+	<body id="store">
+		<div id="banner">
+			<div id="logo">
+				<%= Time.now.strftime("%y.%m.%d %H:%M:%S")%>
+			</div>
+			<%= image_tag("rails.png") %>
+			<%= link_to "Flight finder", index_url %>
+		    <% unless session[:member_id]%>
+			  <%= form_tag login_path, :class => 'login' do%>
+		      <%= label_tag :member, "Имя: " %>
+          <%= text_field_tag  :member %>
+	        <%= submit_tag 'Войти' %>
+		    <% end %>
+	    <% else %>
+		    <%= form_tag logout_path, :class => 'login' do%>
+		      Привет, <%= Member[session[:member_id]].name%>
+	        <%= submit_tag 'выйти' %>
+		    <% end %>
+		  <% end %>
+		</div>
+		<div id="columns">
+			<div id="side">
+				<% if @res%>	
+				  <%= content_tag("div", :id => "select_form") do%>
+						<%= render :partial => "finder/select_form" %>
+					<%end%>
+				<%end%>
+			</div>
+			<div id="main">
+				<%= yield %>
+ 			</div>
+ 		</div>
+ 		<div id="searching" style="display: none">
+      <h2>Идёт поиск результатов, пожалуйста, подождите...<h2>
+    </div>
+ 		<div id="mask"></div>  
+	</body>
+</html>

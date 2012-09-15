@@ -1,0 +1,22 @@
+	unfading();
+	$('#result').slideUp("fast");
+  $('#result').html("<%= escape_javascript render(:partial => "result")%>");
+	$('#select_price_min').attr("value","<%= @results.map{|route| route.min_price}.min %>");
+	$('#select_price_max').attr("value","<%= @results.inject(@results.first.max_price){|max, route|route.max_price ? (max < route.max_price ? route.max_price : max) : max} %>");
+	
+	$('#select_days_min').attr("value","<%= @results.inject(@results.first.min_total_days){|min, route| min > route.min_total_days ? route.min_total_days : min} %>");
+	$('#select_hours_min').attr("value","<%= @results.inject(@results.first.min_total_hours){|min, route| min > route.min_total_hours ? route.min_total_hours : min} %>");
+	
+	$('#select_days_max').attr("value","<%= @results.inject(@results.first.max_total_days){|max, route| max < route.max_total_days ? route.max_total_days : max} %>");
+	$('#select_hours_max').attr("value","<%= @results.inject(@results.first.max_total_hours){|max, route| max < route.max_total_hours ? route.max_total_hours : max} %>");
+	
+	$('#select_pend_days_min').attr("value","<%= @results.inject(@results.first.min_pending_days){|min, route| min > route.min_pending_days ? route.min_pending_days : min} %>");
+	$('#select_pend_hours_min').attr("value","<%= @results.inject(@results.first.min_pending_hours){|min, route| min > route.min_pending_hours ? route.min_pending_hours : min} %>");
+	
+	$('#select_pend_days_max').attr("value","<%= @results.inject(@results.first.max_pending_days){|max, route| max < route.max_pending_days ? route.max_pending_days : max} %>");
+	$('#select_pend_hours_max').attr("value","<%= @results.inject(@results.first.max_pending_hours){|max, route| max < route.max_pending_hours ? route.max_pending_hours : max} %>");
+	
+	$('#select_changes_min').attr("value","0");
+	$('#select_changes_max').attr("value","2");
+	
+	$('#result').slideDown("slow");	

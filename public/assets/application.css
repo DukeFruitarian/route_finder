@@ -1,0 +1,435 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* Global styles */
+/* line 2, ../../app/assets/stylesheets/depot.css.scss */
+#cart, #cart table {
+  font-size: smaller;
+  color: white;
+}
+
+/* line 7, ../../app/assets/stylesheets/depot.css.scss */
+#cart table {
+  border-tor: 1px dotted #595;
+  border-bottom: 1px dotted #595;
+  margin-bottom: 10px;
+}
+
+/* line 14, ../../app/assets/stylesheets/depot.css.scss */
+#store #notice {
+  color: #000;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+/* line 23, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry form, #store .entry form div {
+  display: inline;
+}
+
+/* line 27, ../../app/assets/stylesheets/depot.css.scss */
+#store .cart_title {
+  font: 120% bold;
+}
+
+/* line 30, ../../app/assets/stylesheets/depot.css.scss */
+#store .item_price, #store .total_line {
+  text-align: right;
+}
+
+/* line 33, ../../app/assets/stylesheets/depot.css.scss */
+#store .total_line .total_cell {
+  font-weight: bold;
+  border-top: 1px solid #595;
+}
+
+/* line 38, ../../app/assets/stylesheets/depot.css.scss */
+#store h1 {
+  font: 150% sans-serif;
+  color: #226;
+  border-bottom: 3px dotted #77d;
+}
+
+/* Styles for products/index */
+/* line 46, ../../app/assets/stylesheets/depot.css.scss */
+#product_list table {
+  border-collapse: collapse;
+}
+
+/* line 50, ../../app/assets/stylesheets/depot.css.scss */
+#product_list table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+/* line 55, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_image {
+  width: 60px;
+  height: 70px;
+}
+
+/* line 60, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description {
+  width: 60%;
+}
+
+/* line 64, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description dl {
+  margin: 0;
+}
+
+/* line 68, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description dt {
+  color: #244;
+  font-weight: bold;
+  font-size: larger;
+}
+
+/* line 74, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description dd {
+  margin: 0;
+}
+
+/* line 78, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+}
+
+/* line 84, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_line_even {
+  background: #e0f8f8;
+}
+
+/* line 88, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_line_odd {
+  background: #f8b0f8;
+}
+
+/* START:mainlayout */
+/* Styles for main page */
+/* line 95, ../../app/assets/stylesheets/depot.css.scss */
+#banner {
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
+  text-align: center;
+}
+
+/* line 105, ../../app/assets/stylesheets/depot.css.scss */
+#logo {
+  font: small-caps 14px/14px "Times New Roman", serif;
+  text-align: left;
+}
+
+/* line 110, ../../app/assets/stylesheets/depot.css.scss */
+#banner img {
+  float: left;
+}
+
+/* line 114, ../../app/assets/stylesheets/depot.css.scss */
+#columns {
+  background: #141;
+}
+
+/* line 118, ../../app/assets/stylesheets/depot.css.scss */
+#main {
+  margin-left: 17em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+/* line 125, ../../app/assets/stylesheets/depot.css.scss */
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 16em;
+  background: #141;
+}
+
+/* line 134, ../../app/assets/stylesheets/depot.css.scss */
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+
+/* END:mainlayout */
+/* An entry in the store catalog */
+/* line 142, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+}
+
+/* line 148, ../../app/assets/stylesheets/depot.css.scss */
+#store .title {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+/* line 153, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+/* line 161, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #227;
+}
+
+/* line 167, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry p {
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+}
+
+/* line 172, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry .price_line {
+  clear: both;
+  margin-bottom: 0.5em;
+}
+
+/* line 177, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry .add_to_cart {
+  position: relative;
+}
+
+/* line 181, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+
+/* line 187, ../../app/assets/stylesheets/depot.css.scss */
+#store #notice {
+  color: #000;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+/* line 197, ../../app/assets/stylesheets/depot.css.scss */
+#store h1 {
+  font: 150% sans-serif;
+  color: #226;
+  border-bottom: 3px dotted #77d;
+}
+
+/* Styles for products/index */
+/* line 205, ../../app/assets/stylesheets/depot.css.scss */
+#product_list table {
+  border-collapse: collapse;
+}
+
+/* line 209, ../../app/assets/stylesheets/depot.css.scss */
+#product_list table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+/* line 214, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_image {
+  width: 60px;
+  height: 70px;
+}
+
+/* line 219, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description {
+  width: 60%;
+}
+
+/* line 223, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description dl {
+  margin: 0;
+}
+
+/* line 227, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description dt {
+  color: #244;
+  font-weight: bold;
+  font-size: larger;
+}
+
+/* line 233, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_description dd {
+  margin: 0;
+}
+
+/* line 237, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+}
+
+/* line 243, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_line_even {
+  background: #e0f8f8;
+}
+
+/* line 247, ../../app/assets/stylesheets/depot.css.scss */
+#product_list .list_line_odd {
+  background: #f8b0f8;
+}
+
+/* An entry in the store catalog */
+/* line 253, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+}
+
+/* line 259, ../../app/assets/stylesheets/depot.css.scss */
+#store .title {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+/* line 264, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+/* line 272, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #227;
+}
+
+/* line 278, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry p {
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+}
+
+/* line 283, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry .price_line {
+  clear: both;
+  margin-bottom: 0.5em;
+}
+
+/* line 288, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry .add_to_cart {
+  position: relative;
+}
+
+/* line 292, ../../app/assets/stylesheets/depot.css.scss */
+#store .entry .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+/* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, ../../app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, ../../app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, ../../app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, ../../app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, ../../app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, ../../app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, ../../app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, ../../app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, ../../app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, ../../app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, ../../app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

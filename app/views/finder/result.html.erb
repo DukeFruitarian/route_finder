@@ -1,0 +1,10 @@
+<%= index_link %>
+
+<div id="result">
+</div>
+<%= button_to "res", {:action => :find}, :style => "display: none", :id =>"find_result", :remote => true%>
+<%= javascript_tag %Q|
+  $(document).ready(function(){
+    fading();
+    $('#find_result').click();
+  });|%>

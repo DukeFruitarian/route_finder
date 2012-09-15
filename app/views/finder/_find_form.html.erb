@@ -1,0 +1,51 @@
+<%= form_tag result_path, :class => 'form', :method => :get do %>
+  <div id="places">
+
+      <div id="aeroport">
+        <%= label_tag :departure, "Место отбытия: " %>
+        <%= select_tag  :departure,
+                      options_for_select(Aeroport.names)%>
+      </div>                  
+      
+      <div id="aeroport">
+        <%= label_tag :arrival, "Место прибытия: " %>
+        <%= select_tag  :arrival,
+                        options_for_select(Aeroport.names)%>
+      </div>
+      
+      <div id="date">
+        <%= label_tag :departure_date, "Дата отправления: " %>
+        <%= date_select(:departure_date, Date.today) %><br />
+       </div>
+   </div>
+ 
+  <div id="continue_route" style="display: none">
+    <br />
+    <div id="departure">
+      <div id="aeroport">
+        <%= label_tag :departure_2, "Место отбытия: " %>
+        <%= select_tag  :departure_2,
+                      options_for_select(Aeroport.names)%>
+      </div>                  
+
+      <div id="aeroport">
+        <%= label_tag :arrival_2, "Место прибытия: " %>
+        <%= select_tag  :arrival_2,
+                        options_for_select(Aeroport.names)%>
+      </div>
+            
+      <div id="date">
+        <%= label_tag :departure_date_2, "Дата отправления: " %>
+        <%= date_select(:departure_date_2, Date.today() + 7.days) %><br />
+      </div>
+    </div>
+  </div>
+  <%= check_box_tag(:second_route, '',false, :style => "display: none") %>
+  <%= content_tag("div", :id => "continue",:onclick =>"$('#continue_route').slideDown('slow');$('#cancel_continue').show();$('#continue').hide();$('#second_route').attr('checked',true);") do%>
+   <h3>Продолжить путь</h3>
+  <% end %>
+    <%= content_tag("div", :style => "display: none", :id => "cancel_continue",:onclick =>"$('#continue_route').slideUp('slow');$('#continue').show();$('#cancel_continue').hide();$('#second_route').attr('checked',false);") do%>
+   <h3>Отменить продолжение пути</h3>
+  <% end %>
+  <%= submit_tag("Найти")%>
+<%end%>

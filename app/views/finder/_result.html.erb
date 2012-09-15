@@ -1,0 +1,3 @@
+<% @results.each_with_index do |route_member, route_idx|%>
+  <%= render(:partial => "route", :object => route_member, :locals => {:indx => route_idx})%>
+<% end %>

@@ -1,0 +1,61 @@
+<%= form_tag  index_path, :class => 'form', :onchange => "select();" do %>
+  <div id="places">
+    <div id="changes">
+      <%= label_tag :select_changes_min, "Количество пересадок: " %><br />
+      <%= label_tag :select_changes_min, "От: " %>
+      <%= select_tag  :select_changes_min,
+                      options_for_select(0..2, 0)%>
+      <%= label_tag :select_changes_max, "До: " %>
+      <%= select_tag  :select_changes_max,
+                      options_for_select(0..2, 2)%><br /><br />
+    </div>
+    
+    
+    <div id="arrival">
+      <div id="price">
+        <%= label_tag :select_price_min, "Цена (руб.)" %><br />
+        <%= label_tag :select_price_min, "От: " %>
+        <%= text_field_tag  :select_price_min, "", :size => 5%>
+        <%= label_tag :select_price_max, "До: " %>
+        <%= text_field_tag  :select_price_max, "" , :size =>5%><br /><br />
+      </div>
+      
+      <div id="max_time">
+        <%= label_tag :select_days_min, "Время в пути: " %> <br />
+        <%= label_tag :select_days_min, "От: " %>
+        <%= label_tag :select_days_min, "Дней: " %>
+        <%= select_tag  :select_days_min,
+                      options_for_select(0..3)%>
+        <%= label_tag :select_hours_min, "Часов: " %>
+        <%= select_tag  :select_hours_min,
+                      options_for_select(0..24)%><br />
+        <%= label_tag :select_days_max, "До: " %>
+        <%= label_tag :select_days_max, "Дней: " %>
+        <%= select_tag  :select_days_max,
+                      options_for_select(0..3)%>
+        <%= label_tag :select_hours_max, "Часов: " %>
+        <%= select_tag  :select_hours_max,
+                      options_for_select(0..24)%><br /><br />
+      </div>
+      
+      <div id="pending">
+        
+        <%= label_tag :з, "Время ожидания: " %> <br />
+        <%= label_tag :select_pend_days_min, "От: дней: " %>
+        <%= select_tag  :select_pend_days_min,
+                      options_for_select(0..1)%>
+        <%= label_tag :select_pend_hours_min, "часов: " %>
+        <%= select_tag  :select_pend_hours_min,
+                      options_for_select(0..24)%><br />
+        <%= label_tag :select_pend_days_max, "До: дней: " %>
+        <%= select_tag  :select_pend_days_max,
+                      options_for_select(0..1)%>
+        <%= label_tag :select_pend_hours_max, "часов: " %>
+        <%= select_tag  :select_pend_hours_max,
+                      options_for_select(0..24)%>
+    
+      </div>
+      
+    </div>
+  </div>
+<%end%>

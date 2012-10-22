@@ -4,7 +4,7 @@ class FinderController < ApplicationController
     #debugger
     @member = Member[session[:member_id]] if session[:member_id]
   end
- #adding
+
   def entering
     #debugger
     session[:member_id] = Member.find(:name => params[:member]).first.id if Member.find(:name => params[:member]).first || Member.create(:name => params[:member]).id

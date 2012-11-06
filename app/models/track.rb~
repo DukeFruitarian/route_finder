@@ -1,6 +1,5 @@
 class Track
-  # единичный перелёт из пункта А в пункт Б. Содержит в себе информацию о
-  #   перелёте: стоимость, длительность, время вылета, пункт убытия, пункт назначения
+  # единичный перелёт из пункта А в пункт Б
   attr_accessor :pending_time
   attr_reader :dep_place, :arr_place, :dep_time, :arr_time, :dur, :cost, :company
 

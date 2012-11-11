@@ -10,14 +10,13 @@ class Aeroport < Ohm::Model
 
   attribute :name
   index     :name
-  
+
   def self.names
     all.each{}.map{|ap| [ap.name,ap.id.to_i]}
   end
-  
+
   def after_create
     Ohm.redis.incr "Aeroport:counter"
-    #debugger
   end
-  
+
 end

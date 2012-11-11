@@ -1,6 +1,5 @@
 class FinderController < ApplicationController
-
-
+  # GET /index
   def index
     @member = Member[session[:member_id]] if session[:member_id]
   end
@@ -11,7 +10,7 @@ class FinderController < ApplicationController
     redirect_to index_path
   end
 
-  # выфход из системы
+  # выход из системы
   def leaving
     session[:member_id] = nil
     redirect_to index_path
